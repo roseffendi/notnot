@@ -1,0 +1,14 @@
+{
+    "name": "roseffendi/notnot",
+    "description": "Auth code grant oauth2 lumen experiment",
+    "type": "git",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Roseffendi",
+            "email": "carrpirates@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

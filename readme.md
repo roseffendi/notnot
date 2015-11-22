@@ -1,21 +1,22 @@
-## Lumen PHP Framework
+## Notnot : Authorization code grant oauth2 lumen experiment
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+Warning, this is just experimental repository and far far way from perfect.
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+This is an experiment of using oauth2 authorization code grant using [https://github.com/dingo/api](https://github.com/dingo/api) and [https://github.com/lucadegasperi/oauth2-server-laravel](https://github.com/lucadegasperi/oauth2-server-laravel).
+This is just simple notes creation.
 
-## Official Documentation
+## Walktrhough
 
-Documentation for the framework can be found on the [Lumen website](http://lumen.laravel.com/docs).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-### License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+1. Clone this repository
+2. Uncomment // $app->withFacades(); (you can comment back this row after do point 3)
+3. Run migration and seed (you can update initial data with your preference)
+4. Token routes
+..1. oauth/authorization (GET) -> get user authorization interface
+..2. oauth/authorization (POST) -> retrieve user approval
+..3. oauth/access-token (POST)-> exchange authorization code with authorization token
+5. Api endpoints
+..1. api/note (GET) -> List all notes Retrieve all notes associated with user (resource owner)
+..2. api/note/{id} (GET)   -> Retrieve note by id
+..3. api/note (POST) -> Create new note
+..4. api/note/{id} (PUT/PATCH) -> Update note by given id
+..5. api/note/{id} (DELETE) -> Destroy note

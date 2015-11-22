@@ -20,3 +20,6 @@ This is just simple notes creation.
   3. api/note (POST) -> Create new note
   4. api/note/{id} (PUT/PATCH) -> Update note by given id
   5. api/note/{id} (DELETE) -> Destroy note
+
+## Todo
+1. Create some test
